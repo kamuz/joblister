@@ -1,3 +1,7 @@
 <?php
+require_once 'config/init.php';
 
-echo "Hello, World!";
+$template = new Template('templates/frontpage.php');
+$template->title = 'Latest Jobs';
+
+echo $template;
