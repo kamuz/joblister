@@ -3,7 +3,7 @@
 	<h3></h3>
 	<form method="GET" action="index.php">
 		<select name="category" class="form-control" id="category">
-			<option value="0">Choose category</option>
+			<option value="">Choose category</option>
 			<?php foreach($categories as $category): ?>
 				<option value="<?php echo $category->id; ?>" <?php echo $category->id == $_GET['category'] ? 'selected' : '' ?>><?php echo $category->name; ?></option>
 			<?php endforeach; ?>
@@ -14,18 +14,22 @@
 <div class="row marketing">
 	<div class="col-lg-12">
 		<h1>Jobs in <?php echo $title; ?></h1>
-		<?php foreach($jobs as $job): ?>
-			<div class="job-post">
-				<div class="row">
-					<div class="col-md-10">
-						<h4><?php echo $job->job_title; ?></h4>
-						<p><?php echo $job->description; ?></p></div>
-					<div class="col-md-2">
-						<a class="btn btn-default pull-right" href="#" role="button">View details »</a>
+		<?php if($jobs): ?>
+			<?php foreach($jobs as $job): ?>
+				<div class="job-post">
+					<div class="row">
+						<div class="col-md-10">
+							<h4><a href="#"><?php echo $job->job_title; ?></a></h4>
+							<p><?php echo $job->description; ?></p></div>
+						<div class="col-md-2">
+							<a class="btn btn-default pull-right" href="#">View details »</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		<?php else: ?>
+			<p style="margin-bottom: 30px;">Sorry, but jobs not found in this category.</p>
+		<?php endif; ?>
 	</div>
 </div>
 <?php include 'partials/footer.php'; ?>

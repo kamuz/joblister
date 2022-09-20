@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>&copy; 2016 Company, Inc.</p>
+    <p>&copy; <?php echo date('Y'); ?> Company, Inc.</p>
 </footer>
 </body>
 </html>
