@@ -6,38 +6,19 @@
 </div>
 <div class="row marketing">
 	<div class="col-lg-12">
-		<div class="job-post">
-			<div class="row">
-				<div class="col-md-10">
-					<h4>Facilis perspiciatis</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis perspiciatis eos inventore et quibusdam aspernatur libero nobis</p></div>
-				<div class="col-md-2">
-					<a class="btn btn-default pull-right" href="#" role="button">View details »</a>
+		<?php dd($jobs) ?>
+		<?php foreach($jobs as $job): ?>
+			<div class="job-post">
+				<div class="row">
+					<div class="col-md-10">
+						<h4><?php echo $job->job_title; ?></h4>
+						<p><?php echo $job->description; ?></p></div>
+					<div class="col-md-2">
+						<a class="btn btn-default pull-right" href="#" role="button">View details »</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="job-post">
-			<div class="row">
-				<div class="col-md-10">
-					<h4>Debitis quibusdam</h4>
-					<p>Magni tempora quos pariatur qui quod? Debitis quibusdam blanditiis dolorum, aperiam id porro necessitatibus, pariatur tempore.</p>
-				</div>
-				<div class="col-md-2">
-					<a class="btn btn-default pull-right" href="#" role="button">View details »</a>
-				</div>
-			</div>
-		</div>
-		<div class="job-post">
-			<div class="row">
-				<div class="col-md-10">
-					<h4>Fuga recusandae</h4>
-					<p>Cum, cupiditate harum alias ad illum corporis earum fuga recusandae corrupti autem accusantium illo, tempore dicta quaerat.</p>
-				</div>
-				<div class="col-md-2">
-					<a class="btn btn-default pull-right" href="#" role="button">View details »</a>
-				</div>
-			</div>
-		</div>
+		<?php endforeach; ?>
 	</div>
 </div>
 <?php include 'partials/footer.php'; ?>
