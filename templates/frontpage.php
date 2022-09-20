@@ -1,12 +1,19 @@
 <?php include 'partials/header.php'; ?>
 <div class="jumbotron">
-	<h2>Find your best job</h2>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, tenetur optio in eius assumenda, magnam quibusdam sapiente illo est commodi voluptates aliquid aspernatur quos ipsa dolore fugit laboriosam vero. Quia.</p>
-	<a href="#" class="btn btn-lg btn-success">Sign up today</a>
+	<h3></h3>
+	<form method="GET" action="index.php">
+		<select name="category" class="form-control" id="category">
+			<option value="0">Choose category</option>
+			<?php foreach($categories as $category): ?>
+				<option value="<?php echo $category->id; ?>" <?php echo $category->id == $_GET['category'] ? 'selected' : '' ?>><?php echo $category->name; ?></option>
+			<?php endforeach; ?>
+		</select>
+		<input type="submit" class="btn btn-lg btn-success" value="Search job">
+	</form>
 </div>
 <div class="row marketing">
 	<div class="col-lg-12">
-		<?php dd($jobs) ?>
+		<h1>Jobs in <?php echo $title; ?></h1>
 		<?php foreach($jobs as $job): ?>
 			<div class="job-post">
 				<div class="row">
