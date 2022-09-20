@@ -19,5 +19,11 @@
 					<li role="presentation"><a href="create.php">Add Job</a></li>
 				</ul>
 			</nav>
-			<h3 class="text-muted"><?php echo SITE_TITLE ?></h3>
+			<h3 class="text-muted">
+				<?php if ( $_SERVER['QUERY_STRING'] !== '' ) : ?>
+					<a href="<?php echo SITE_URL; ?>"><?php echo SITE_TITLE ?></a>
+				<?php else : ?>
+					<?php echo SITE_TITLE ?>
+				<?php endif; ?>
+			</h3>
 		</div>

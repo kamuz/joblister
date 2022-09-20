@@ -1,6 +1,5 @@
 <?php include 'partials/header.php'; ?>
 <div class="jumbotron">
-	<h3></h3>
 	<form method="GET" action="index.php">
 		<select name="category" class="form-control" id="category">
 			<option value="">Choose category</option>
@@ -13,7 +12,7 @@
 </div>
 <div class="row marketing">
 	<div class="col-lg-12">
-		<h1>Jobs in <?php echo $title; ?></h1>
+		<h1><?php echo $_GET['category'] ? 'Jobs in ' : ''; ?> <?php echo $title; ?></h1>
 		<?php if($jobs): ?>
 			<?php foreach($jobs as $job): ?>
 				<div class="job-post">
