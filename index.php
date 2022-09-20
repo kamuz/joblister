@@ -1,5 +1,7 @@
 <?php
+
 require_once 'config/init.php';
+
 $job = new Job;
 $template = new Template('templates/frontpage.php');
 $template->title = 'Latest Jobs';

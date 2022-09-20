@@ -1,7 +1,9 @@
 <?php
+
 // Config file
 require_once 'config.php';
 
+// Debug
 function dd($data){
 	echo '<pre>' . print_r($data, true) . '</pre>';
 }
@@ -13,4 +15,5 @@ function autoloader($class) {
 		require_once $file;
 	}
 }
+// Autoload init
 spl_autoload_register('autoloader');
