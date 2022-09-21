@@ -18,10 +18,10 @@
 				<div class="job-post">
 					<div class="row">
 						<div class="col-md-10">
-							<h4><a href="#"><?php echo $job->job_title; ?></a></h4>
+							<h4><a href="job.php?id=<?php echo $job->id; ?>"><?php echo $job->job_title; ?></a></h4>
 							<p><?php echo $job->description; ?></p></div>
 						<div class="col-md-2">
-							<a class="btn btn-default pull-right" href="#">View details »</a>
+							<a class="btn btn-default pull-right" href="job.php?id=<?php echo $job->id; ?>">View details »</a>
 						</div>
 					</div>
 				</div>
