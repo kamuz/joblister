@@ -20,10 +20,11 @@
 				</ul>
 			</nav>
 			<h3 class="text-muted">
-				<?php if ( $_SERVER['QUERY_STRING'] !== '' ) : ?>
+				<?php if ( $_SERVER['PHP_SELF'] !== '/index.php' ) : ?>
 					<a href="<?php echo SITE_URL; ?>"><?php echo SITE_TITLE ?></a>
 				<?php else : ?>
 					<?php echo SITE_TITLE ?>
 				<?php endif; ?>
 			</h3>
 		</div>
+		<?php displayMessage(); ?>
