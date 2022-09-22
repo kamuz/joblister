@@ -1,6 +1,7 @@
 <?php include 'partials/header.php'; ?>
 <div class="row marketing">
 	<div class="col-lg-12">
+		<a href="<?php echo SITE_URL; ?>" class="btn btn-default">Go Back</a>
 		<h1 class="page-header"><?php echo $job->job_title; ?> (<?php echo $job->location; ?>)</h1>
 		<small>Posted by: <?php echo $job->contact_user; ?> on <?php echo $job->post_date; ?></small>
 		<hr>
@@ -10,7 +11,13 @@
 			<li class="list-group-item"><strong>Salary:</strong> <?php echo $job->salary; ?></li>
 			<li class="list-group-item"><strong>Email:</strong> <?php echo $job->contact_email; ?></li>
 		</ul>
-		<a href="<?php echo SITE_URL; ?>" class="btn btn-default">Go Back</a>
+		<div class="well">
+			<a href="edit.php?id=<?php echo $job->id; ?>" class="btn btn-primary">Edit Job</a>
+			<form style="display: inline" method="POST" action="job.php">
+				<input type="hidden" name="delete" value="<?php echo $job->id; ?>">
+				<input type="submit" class="btn btn-danger" value="Detele Job">
+			</form>
+		</div>
 		<br><br>
 	</div>
 </div>

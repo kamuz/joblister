@@ -45,10 +45,12 @@ function displayMessage(){
 			// Assign type variable
 			$message_type = $_SESSION['message_type'];
 			// Create output
-			if($message_type == 'error'){
-				echo '<div class="alert alert-danger">' . $message . '</div>';
+			if($message_type == 'danger'){
+				echo '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $message . '</div>';
 			} elseif($message_type == 'success'){
-				echo '<div class="alert alert-success">' . $message . '</div>';
+				echo '<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $message . '</div>';
+			} elseif($message_type == 'warning') {
+				echo '<div class="alert alert-warning alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $message . '</div>';
 			}
 		}
 	}

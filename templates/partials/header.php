@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Joblister</title>
-	<link rel="stylesheet" href="templates/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="templates/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="templates/assets/css/style.css">
 	<link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
 </head>
@@ -20,7 +20,7 @@
 				</ul>
 			</nav>
 			<h3 class="text-muted">
-				<?php if ( $_SERVER['PHP_SELF'] !== '/index.php' ) : ?>
+				<?php if ( $_SERVER['PHP_SELF'] !== '/index.php' || !empty( $_SERVER['QUERY_STRING'] ) ) : ?>
 					<a href="<?php echo SITE_URL; ?>"><?php echo SITE_TITLE ?></a>
 				<?php else : ?>
 					<?php echo SITE_TITLE ?>

@@ -23,7 +23,7 @@
 				</div>
 				<div class="form-group">
 					<label for="description">Description</label>
-					<input type="textarea" class="form-control" name="description">
+					<textarea class="form-control" name="description"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="location">Location</label>

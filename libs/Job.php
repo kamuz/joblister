@@ -75,4 +75,16 @@ class Job{
 			return false;
 		}
 	}
+
+	// Delete Job
+	public function delete( $id ) {
+		// Delete query
+		$this->db->query( "DELETE FROM jobs WHERE id = $id" );
+		// Execute
+		if ( $this->db->execute() ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

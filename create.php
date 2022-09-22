@@ -21,7 +21,7 @@ if ( !empty( $data ) ) {
 	if ( $job->create( $data ) ) {
 		redirect('index.php', 'Your job has been listed', 'success');
 	} else {
-		redirect('index.php', 'Something went wrong', 'error');
+		redirect('index.php', 'Something went wrong', 'warning');
 	}
 }
 
