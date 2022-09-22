@@ -11,13 +11,11 @@
 			<li class="list-group-item"><strong>Salary:</strong> <?php echo $job->salary; ?></li>
 			<li class="list-group-item"><strong>Email:</strong> <?php echo $job->contact_email; ?></li>
 		</ul>
-		<div class="well">
-			<a href="edit.php?id=<?php echo $job->id; ?>" class="btn btn-primary">Edit Job</a>
-			<form style="display: inline" method="POST" action="job.php">
-				<input type="hidden" name="delete" value="<?php echo $job->id; ?>">
-				<input type="submit" class="btn btn-danger" value="Detele Job">
-			</form>
-		</div>
+		<a href="edit.php?id=<?php echo $job->id; ?>" class="btn btn-primary btn-lg">Edit Job</a>
+		<form style="display: inline" method="POST" action="job.php">
+			<input type="hidden" name="delete" value="<?php echo $job->id; ?>">
+			<input type="submit" class="btn btn-danger btn-lg" value="Detele Job">
+		</form>
 		<br><br>
 	</div>
 </div>
