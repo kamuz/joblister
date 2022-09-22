@@ -7,7 +7,7 @@
 				<option value="<?php echo $category->id; ?>" <?php echo $category->id == $_GET['category'] ? 'selected' : '' ?>><?php echo $category->name; ?></option>
 			<?php endforeach; ?>
 		</select>
-		<input type="submit" class="btn btn-lg btn-success" value="Search job">
+		<input type="submit" class="btn btn-lg btn-success" value="Filter jobs">
 	</form>
 </div>
 <div class="row marketing">
